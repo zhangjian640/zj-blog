@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>掘金新闻</title>
+    <link rel="stylesheet" href="/public/css/bootstrap.css">
+</head>
+<body>
+<div class="container">
+    <div class="row" style="margin-top: 20px;">
+        <div class="col-md">
+            <div class="card" style="width: 100%;">
+                <div class="card-header">
+                    掘金新闻
+                </div>
+                <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                        <% news.forEach(item => { %>
+                            	<li class="list-group-item">
+                                    <a href="<%=item.url%>">
+                                        <%= item.title %>
+                                    </a>
+                                    <span style="float: right;">
+                                        <%= item.time %>
+                                    </span>
+                                </li>
+                        <%  }) %>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
